@@ -1,0 +1,68 @@
+[
+ {
+  "name": "datasets",
+  "description": "",
+  "configured": true,
+  "inputs": [
+   {
+    "id": "input",
+    "label": "input",
+    "service": "datasets",
+    "to": "output"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "output",
+    "label": "output"
+   }
+  ],
+  "options": {
+   "group": "Custom",
+   "icon": "RiTyphoonFill",
+   "click": null,
+   "values": {},
+   "args": []
+  }
+ },
+ {
+  "name": "predictor",
+  "description": "",
+  "configured": true,
+  "inputs": [
+   {
+    "id": "fit",
+    "label": "fit",
+    "service": "fit",
+    "to": "fit_output"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "fit_output",
+    "label": "fit_output"
+   }
+  ],
+  "options": {
+   "group": "Custom",
+   "icon": "RiTyphoonFill",
+   "click": null,
+   "values": {
+    "task": "classification"
+   },
+   "args": [
+    {
+     "name": "task",
+     "type": "select",
+     "label": "task",
+     "helper": "Helper text",
+     "value": "classification",
+     "options": [
+      "classification",
+      "regression"
+     ]
+    }
+   ]
+  }
+ }
+]
