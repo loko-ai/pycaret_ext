@@ -7,4 +7,5 @@ ENV GATEWAY=$GATEWAY
 ADD . /plugin
 ENV PYTHONPATH=$PYTHONPATH:/plugin
 WORKDIR /plugin/services
+EXPOSE 8080
 CMD python services.py
