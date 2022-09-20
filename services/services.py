@@ -54,3 +54,6 @@ def fit(value, args):
 def get_datasets(value, args):
     return jsonify(all_datasets[["Dataset", "Default Task"]].to_dict("record"))
 
+
+if __name__ == "__main__":
+    app.run("0.0.0.0", 8080)
