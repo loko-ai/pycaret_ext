@@ -5,16 +5,16 @@
   "configured": true,
   "inputs": [
    {
-    "id": "input",
-    "label": "input",
+    "id": "info",
+    "label": "info",
     "service": "datasets",
     "to": "output"
    }
   ],
   "outputs": [
    {
-    "id": "output",
-    "label": "output"
+    "id": "info",
+    "label": "info"
    }
   ],
   "options": {
@@ -28,7 +28,7 @@
  {
   "name": "predictor",
   "description": "",
-  "configured": true,
+  "configured": false,
   "inputs": [
    {
     "id": "fit",
@@ -55,8 +55,10 @@
      "name": "task",
      "type": "select",
      "label": "task",
-     "helper": "Helper text",
+     "helper": "",
+     "group": "",
      "value": "classification",
+     "description": "",
      "options": [
       "classification",
       "regression"
