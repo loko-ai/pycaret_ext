@@ -20,7 +20,7 @@ all_datasets = datasets.get_data('index', verbose=False)
 
 
 @app.route("/fit", methods=["POST"])
-@extract_value_args
+@extract_value_args(file=False)
 def fit(value, args):
     task = args.get("task")
 
@@ -41,7 +41,7 @@ def fit(value, args):
 
 
 @app.route("/datasets", methods=["POST"])
-@extract_value_args
+@extract_value_args(file=False)
 def get_datasets(value, args):
     return jsonify(all_datasets[["Dataset", "Default Task"]].to_dict("record"))
 
