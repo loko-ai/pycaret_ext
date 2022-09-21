@@ -3,7 +3,7 @@ import functools
 from flask import Flask, request, jsonify
 
 import pycaret.datasets as datasets
-
+from loko_extensions.business.decorators import extract_value_args
 from extensions.components import create_components_json
 
 app = Flask("")
@@ -18,18 +18,9 @@ create_components_json()
 all_datasets = datasets.get_data('index', verbose=False)
 
 
-def dec(f):
-    @functools.wraps(f)
-    def temp():
-        args = request.json.get('args')
-        value = request.json.get("value")
-        return f(value, args)
-
-    return temp
-
 
 @app.route("/fit", methods=["POST"])
-@dec
+@extract_value_args
 def fit(value, args):
     task = args.get("task")
 
@@ -50,7 +41,7 @@ def fit(value, args):
 
 
 @app.route("/datasets", methods=["POST"])
-@dec
+@extract_value_args
 def get_datasets(value, args):
     return jsonify(all_datasets[["Dataset", "Default Task"]].to_dict("record"))
 
