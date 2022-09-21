@@ -8,7 +8,7 @@
     "id": "info",
     "label": "info",
     "service": "datasets",
-    "to": "output"
+    "to": "info"
    }
   ],
   "outputs": [

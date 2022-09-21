@@ -9,7 +9,7 @@ def create_components_json():
 
     dataset_inp = [Input("info", service="datasets", to="info")]
     dataset_out = [Output("info")]
-    datasets_comp = Component("datasets", inputs=dataset_inp, outputs=dataset_out)
+    datasets_comp = Component("datasets", inputs=dataset_inp, outputs=dataset_out, )
     predictor_comp = Component("predictor", inputs=predictor_inp, outputs=predictor_out,args=predictor_args, configured=False)
     save_extensions([datasets_comp, predictor_comp])
 

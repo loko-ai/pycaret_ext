@@ -3,7 +3,7 @@
   "id": "pycaret_ext",
   "description": "",
   "created_on": "03/09/2022, 05:39:06",
-  "last_modify": "20/09/2022, 11:19:52",
+  "last_modify": "21/09/2022, 07:45:51",
   "graphs": {
     "main": {
       "nodes": [
@@ -101,91 +101,6 @@
           "positionAbsolute": {
             "x": 463,
             "y": 139
-          },
-          "__class__": "Node"
-        },
-        {
-          "id": "c01f8525-23f2-4af9-b48c-0e25727fe639",
-          "position": {
-            "x": 719,
-            "y": 152
-          },
-          "type": "custom",
-          "dragHandle": "#nodeHandle",
-          "sourcePosition": "right",
-          "targetPosition": "left",
-          "width": 150,
-          "height": 72,
-          "selected": false,
-          "dragging": false,
-          "data": {
-            "name": "predictor",
-            "events": null,
-            "description": "",
-            "inputs": [
-              {
-                "id": "fit",
-                "label": "fit",
-                "service": "fit",
-                "to": "fit_output"
-              }
-            ],
-            "outputs": [
-              {
-                "id": "fit_output",
-                "label": "fit_output"
-              }
-            ],
-            "configured": true,
-            "options": {
-              "group": null,
-              "args": [
-                {
-                  "name": "comment",
-                  "type": "area",
-                  "label": "Node comment",
-                  "helper": "Use it to explain the usage of this node"
-                },
-                {
-                  "name": "alias",
-                  "type": "text",
-                  "label": "Name",
-                  "helper": "Use this name as an alias"
-                },
-                {
-                  "name": "debug",
-                  "type": "boolean",
-                  "label": "Debug to Console",
-                  "divider": true
-                },
-                {
-                  "name": "task",
-                  "type": "select",
-                  "label": "task",
-                  "helper": "Helper text",
-                  "value": "classification",
-                  "options": [
-                    "classification",
-                    "regression"
-                  ]
-                }
-              ],
-              "click": null,
-              "icon": null,
-              "values": {
-                "comment": "",
-                "alias": "Regressor",
-                "debug": false,
-                "task": "regression"
-              }
-            },
-            "locked": null
-          },
-          "selectable": true,
-          "draggable": true,
-          "positionAbsolute": {
-            "x": 719,
-            "y": 152
           },
           "__class__": "Node"
         },
@@ -292,72 +207,6 @@
           "__class__": "Node"
         },
         {
-          "id": "d8634458-061a-4315-95c8-8e2b90c74c13",
-          "position": {
-            "x": 718,
-            "y": 426
-          },
-          "type": "custom",
-          "dragHandle": "#nodeHandle",
-          "sourcePosition": "right",
-          "targetPosition": "left",
-          "width": 150,
-          "height": 56,
-          "selected": false,
-          "dragging": false,
-          "data": {
-            "name": "datasets",
-            "events": null,
-            "description": "",
-            "inputs": [
-              {
-                "id": "input",
-                "label": "input",
-                "service": "datasets",
-                "to": "output"
-              }
-            ],
-            "outputs": [
-              {
-                "id": "output",
-                "label": "output"
-              }
-            ],
-            "configured": true,
-            "options": {
-              "group": null,
-              "args": [
-                {
-                  "name": "comment",
-                  "type": "area",
-                  "label": "Node comment",
-                  "helper": "Use it to explain the usage of this node"
-                },
-                {
-                  "name": "alias",
-                  "type": "text",
-                  "label": "Name",
-                  "helper": "Use this name as an alias"
-                },
-                {
-                  "name": "debug",
-                  "type": "boolean",
-                  "label": "Debug to Console",
-                  "divider": true
-                }
-              ],
-              "click": null,
-              "icon": null,
-              "values": {
-                "debug": true
-              }
-            }
-          },
-          "selectable": true,
-          "draggable": true,
-          "__class__": "Node"
-        },
-        {
           "id": "b1f8c2da-71e7-4361-af07-6cddf1f89354",
           "position": {
             "x": 510,
@@ -440,7 +289,8 @@
                 "type": "String",
                 "value": "Hello world!"
               }
-            }
+            },
+            "locked": null
           },
           "selectable": true,
           "draggable": true,
@@ -483,8 +333,8 @@
           "targetPosition": "left",
           "width": 750,
           "height": 136,
-          "selected": null,
-          "dragging": null,
+          "selected": false,
+          "dragging": false,
           "data": {
             "comment": "Train and select the best performing model",
             "fill": "#F74B65",
@@ -495,14 +345,171 @@
           "selectable": false,
           "connectable": false,
           "__class__": "Node"
+        },
+        {
+          "id": "4bd6d3d5-8288-4f59-8790-27bb544ad382",
+          "position": {
+            "x": 714.2073914156312,
+            "y": 174.80419737998568
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "predictor",
+            "events": null,
+            "description": "",
+            "inputs": [
+              {
+                "id": "fit",
+                "label": "fit",
+                "service": "fit",
+                "to": "fit_output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "fit_output",
+                "label": "fit_output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": null,
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "task",
+                  "type": "select",
+                  "label": "task",
+                  "helper": "",
+                  "group": "",
+                  "value": "classification",
+                  "description": "",
+                  "options": [
+                    "classification",
+                    "regression"
+                  ]
+                }
+              ],
+              "click": null,
+              "icon": null,
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "task": "regression"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 714.2073914156312,
+            "y": 174.80419737998568
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "9cc838ca-c9e1-4034-809d-941246a0dc69",
+          "position": {
+            "x": 716,
+            "y": 449
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "datasets",
+            "events": null,
+            "description": "",
+            "inputs": [
+              {
+                "id": "info",
+                "label": "info",
+                "service": "datasets",
+                "to": "info"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "info",
+                "label": "info"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": null,
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": null,
+              "icon": null,
+              "values": {
+                "debug": true
+              }
+            }
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 716,
+            "y": 449
+          },
+          "__class__": "Node"
         }
       ],
       "edges": [
         {
-          "id": "reactflow__edge-c8c6fdb3-09da-4605-b8e2-13d66af5a167output-c01f8525-23f2-4af9-b48c-0e25727fe639fit",
+          "id": "reactflow__edge-c8c6fdb3-09da-4605-b8e2-13d66af5a167output-4bd6d3d5-8288-4f59-8790-27bb544ad382fit",
           "source": "c8c6fdb3-09da-4605-b8e2-13d66af5a167",
           "sourceHandle": "output",
-          "target": "c01f8525-23f2-4af9-b48c-0e25727fe639",
+          "target": "4bd6d3d5-8288-4f59-8790-27bb544ad382",
           "targetHandle": "fit",
           "data": {
             "startColor": "#D770AD",
@@ -513,8 +520,8 @@
           "__class__": "Edge"
         },
         {
-          "id": "reactflow__edge-c01f8525-23f2-4af9-b48c-0e25727fe639fit_output-7b2b1f54-9264-4428-8eb9-e65da6bf5aacinput",
-          "source": "c01f8525-23f2-4af9-b48c-0e25727fe639",
+          "id": "reactflow__edge-4bd6d3d5-8288-4f59-8790-27bb544ad382fit_output-7b2b1f54-9264-4428-8eb9-e65da6bf5aacinput",
+          "source": "4bd6d3d5-8288-4f59-8790-27bb544ad382",
           "sourceHandle": "fit_output",
           "target": "7b2b1f54-9264-4428-8eb9-e65da6bf5aac",
           "targetHandle": "input",
@@ -527,11 +534,11 @@
           "__class__": "Edge"
         },
         {
-          "id": "reactflow__edge-b1f8c2da-71e7-4361-af07-6cddf1f89354output-d8634458-061a-4315-95c8-8e2b90c74c13input",
+          "id": "reactflow__edge-b1f8c2da-71e7-4361-af07-6cddf1f89354output-9cc838ca-c9e1-4034-809d-941246a0dc69info",
           "source": "b1f8c2da-71e7-4361-af07-6cddf1f89354",
           "sourceHandle": "output",
-          "target": "d8634458-061a-4315-95c8-8e2b90c74c13",
-          "targetHandle": "input",
+          "target": "9cc838ca-c9e1-4034-809d-941246a0dc69",
+          "targetHandle": "info",
           "data": {
             "startColor": "#D770AD",
             "stopColor": "#888"
