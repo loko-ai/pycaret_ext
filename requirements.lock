@@ -46,7 +46,7 @@ kiwisolver==1.4.4
 kmodes==0.12.2
 lightgbm==3.3.2
 llvmlite==0.37.0
-loko-extensions==0.0.1.dev4
+loko-extensions==0.0.1.dev5
 Mako==1.2.2
 MarkupSafe==2.1.1
 matplotlib==3.5.3

@@ -3,7 +3,7 @@
   "id": "pycaret_ext",
   "description": "",
   "created_on": "03/09/2022, 05:39:06",
-  "last_modify": "21/09/2022, 07:45:51",
+  "last_modify": "04/10/2022, 15:13:05",
   "graphs": {
     "main": {
       "nodes": [
@@ -101,108 +101,6 @@
           "positionAbsolute": {
             "x": 463,
             "y": 139
-          },
-          "__class__": "Node"
-        },
-        {
-          "id": "7b2b1f54-9264-4428-8eb9-e65da6bf5aac",
-          "position": {
-            "x": 983,
-            "y": 176
-          },
-          "type": "custom",
-          "dragHandle": "#nodeHandle",
-          "sourcePosition": "right",
-          "targetPosition": "left",
-          "width": 150,
-          "height": 56,
-          "selected": false,
-          "dragging": false,
-          "data": {
-            "name": "Selector",
-            "events": null,
-            "description": "### Description\nThe SELECTOR component is used to select the value of one or more object keys. The required key/s are defined using the parameter **Keys**.\n\nIn order to add other keys you need to click on the **\"Add field\"** buttons.\n \nIf the field **Ignore Error** is toggled, missing key values are ignored.\n\nIt's also possible to select nested key, just by writing them in a *key* field, and seperating them using a full stop. Let's consider the object in the example below: if you want to have access to the content of the \"key3\" object, you need to use the following notation \"key1.key2.key3\".\n\n\n```json\n {\"key1\":{\"key2\":{\"key3\":[\"val1\", \"val2\", \"val3\"]}}} \n```\n\n\n\n### Input\n\nThe input consists of a dictionary.\n\n\n\n### Output\n\nThe output is the value of the required key of the dictionary received as input, if only one key is selected; otherwise it's an object which contains the keys specified and their value.\n",
-            "inputs": [
-              {
-                "id": "input",
-                "label": "input"
-              }
-            ],
-            "outputs": [
-              {
-                "id": "output",
-                "label": "output"
-              }
-            ],
-            "configured": true,
-            "options": {
-              "group": "Common",
-              "args": [
-                {
-                  "name": "comment",
-                  "type": "area",
-                  "label": "Node comment",
-                  "helper": "Use it to explain the usage of this node"
-                },
-                {
-                  "name": "alias",
-                  "type": "text",
-                  "label": "Name",
-                  "helper": "Use this name as an alias"
-                },
-                {
-                  "name": "debug",
-                  "type": "boolean",
-                  "label": "Debug to Console",
-                  "divider": true
-                },
-                {
-                  "name": "ignore_err",
-                  "label": "Ignor Error",
-                  "type": "boolean",
-                  "description": "Choose whether to ignore error in case of a missing key or not"
-                },
-                {
-                  "name": "keys",
-                  "label": "Keys",
-                  "type": "multiKeyValue",
-                  "validation": {
-                    "required": "Required field"
-                  },
-                  "description": "the name of the key to select from the incoming message",
-                  "fields": [
-                    {
-                      "name": "k",
-                      "placeholder": "key",
-                      "validation": {
-                        "required": "Required field"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "click": null,
-              "icon": "RiCursorFill",
-              "values": {
-                "comment": "",
-                "alias": "",
-                "debug": true,
-                "ignore_err": false,
-                "keys": [
-                  {
-                    "k": "best",
-                    "id": "aac051a6-cbf9-40bd-894a-f562dea6a2bf"
-                  }
-                ]
-              }
-            },
-            "locked": null
-          },
-          "selectable": true,
-          "draggable": true,
-          "positionAbsolute": {
-            "x": 983,
-            "y": 176
           },
           "__class__": "Node"
         },
@@ -347,10 +245,189 @@
           "__class__": "Node"
         },
         {
-          "id": "4bd6d3d5-8288-4f59-8790-27bb544ad382",
+          "id": "9cc838ca-c9e1-4034-809d-941246a0dc69",
           "position": {
-            "x": 714.2073914156312,
-            "y": 174.80419737998568
+            "x": 716,
+            "y": 449
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "datasets",
+            "events": null,
+            "description": "",
+            "inputs": [
+              {
+                "id": "info",
+                "label": "info",
+                "service": "datasets",
+                "to": "info"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "info",
+                "label": "info"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": null,
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": null,
+              "icon": null,
+              "values": {
+                "debug": true
+              }
+            }
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 716,
+            "y": 449
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "502ba389-b409-454a-b47c-1554250626ed",
+          "position": {
+            "x": 982,
+            "y": 187
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Selector",
+            "events": null,
+            "description": "### Description\nThe SELECTOR component is used to select the value of one or more object keys. The required key/s are defined using the parameter **Keys**.\n\nIn order to add other keys you need to click on the **\"Add field\"** button.\n\nIf the field **Ignore Error** is toggled, missing keys are ignored.\n\nIt's also possible to select nested key, just by writing them in a *key* field, and seperating them using a full stop. Let's consider the object in the example below: if you want to have access to the content of the \"key3\" object, you need to use the following notation \"key1.key2.key3\".\n\n\n```json\n {\"key1\":{\"key2\":{\"key3\":[\"val1\", \"val2\", \"val3\"]}}} \n```\n\n\n\n### Input\n\nThe input consists of a dictionary.\n\n\n\n### Output\n\nThe output is the value of the required key of the dictionary received as input, if only one key is selected; otherwise it's an object which contains the keys specified and their value.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "ignore_err",
+                  "label": "Ignor Error",
+                  "type": "boolean",
+                  "description": "Choose whether to ignore error in case of a missing key or not"
+                },
+                {
+                  "name": "exclude",
+                  "label": "Exclude Keys",
+                  "type": "boolean",
+                  "description": "If enabled, the output contains the whole input object excluding the specified keys; otherwise, only the specified keys are returned"
+                },
+                {
+                  "name": "keys",
+                  "label": "Keys",
+                  "type": "multiKeyValue",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "description": "Name of the key/s to select from the incoming message",
+                  "fields": [
+                    {
+                      "name": "k",
+                      "placeholder": "key",
+                      "validation": {
+                        "required": "Required field"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "click": null,
+              "icon": "RiCursorFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "ignore_err": false,
+                "exclude": false,
+                "keys": [
+                  {
+                    "k": "best",
+                    "id": "66d13b6c-b139-44c5-b096-e9aa018d7aaf"
+                  }
+                ]
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 982,
+            "y": 187
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "57e55047-36fd-4c2d-b39f-91e26bc99f5c",
+          "position": {
+            "x": 687,
+            "y": 159
           },
           "type": "custom",
           "dragHandle": "#nodeHandle",
@@ -428,88 +505,32 @@
           "selectable": true,
           "draggable": true,
           "positionAbsolute": {
-            "x": 714.2073914156312,
-            "y": 174.80419737998568
-          },
-          "__class__": "Node"
-        },
-        {
-          "id": "9cc838ca-c9e1-4034-809d-941246a0dc69",
-          "position": {
-            "x": 716,
-            "y": 449
-          },
-          "type": "custom",
-          "dragHandle": "#nodeHandle",
-          "sourcePosition": "right",
-          "targetPosition": "left",
-          "width": 150,
-          "height": 56,
-          "selected": false,
-          "dragging": false,
-          "data": {
-            "name": "datasets",
-            "events": null,
-            "description": "",
-            "inputs": [
-              {
-                "id": "info",
-                "label": "info",
-                "service": "datasets",
-                "to": "info"
-              }
-            ],
-            "outputs": [
-              {
-                "id": "info",
-                "label": "info"
-              }
-            ],
-            "configured": true,
-            "options": {
-              "group": null,
-              "args": [
-                {
-                  "name": "comment",
-                  "type": "area",
-                  "label": "Node comment",
-                  "helper": "Use it to explain the usage of this node"
-                },
-                {
-                  "name": "alias",
-                  "type": "text",
-                  "label": "Name",
-                  "helper": "Use this name as an alias"
-                },
-                {
-                  "name": "debug",
-                  "type": "boolean",
-                  "label": "Debug to Console",
-                  "divider": true
-                }
-              ],
-              "click": null,
-              "icon": null,
-              "values": {
-                "debug": true
-              }
-            }
-          },
-          "selectable": true,
-          "draggable": true,
-          "positionAbsolute": {
-            "x": 716,
-            "y": 449
+            "x": 687,
+            "y": 159
           },
           "__class__": "Node"
         }
       ],
       "edges": [
         {
-          "id": "reactflow__edge-c8c6fdb3-09da-4605-b8e2-13d66af5a167output-4bd6d3d5-8288-4f59-8790-27bb544ad382fit",
+          "id": "reactflow__edge-b1f8c2da-71e7-4361-af07-6cddf1f89354output-9cc838ca-c9e1-4034-809d-941246a0dc69info",
+          "source": "b1f8c2da-71e7-4361-af07-6cddf1f89354",
+          "sourceHandle": "output",
+          "target": "9cc838ca-c9e1-4034-809d-941246a0dc69",
+          "targetHandle": "info",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-c8c6fdb3-09da-4605-b8e2-13d66af5a167output-57e55047-36fd-4c2d-b39f-91e26bc99f5cfit",
           "source": "c8c6fdb3-09da-4605-b8e2-13d66af5a167",
           "sourceHandle": "output",
-          "target": "4bd6d3d5-8288-4f59-8790-27bb544ad382",
+          "target": "57e55047-36fd-4c2d-b39f-91e26bc99f5c",
           "targetHandle": "fit",
           "data": {
             "startColor": "#D770AD",
@@ -520,28 +541,14 @@
           "__class__": "Edge"
         },
         {
-          "id": "reactflow__edge-4bd6d3d5-8288-4f59-8790-27bb544ad382fit_output-7b2b1f54-9264-4428-8eb9-e65da6bf5aacinput",
-          "source": "4bd6d3d5-8288-4f59-8790-27bb544ad382",
+          "id": "reactflow__edge-57e55047-36fd-4c2d-b39f-91e26bc99f5cfit_output-502ba389-b409-454a-b47c-1554250626edinput",
+          "source": "57e55047-36fd-4c2d-b39f-91e26bc99f5c",
           "sourceHandle": "fit_output",
-          "target": "7b2b1f54-9264-4428-8eb9-e65da6bf5aac",
+          "target": "502ba389-b409-454a-b47c-1554250626ed",
           "targetHandle": "input",
           "data": {
             "startColor": "#888",
             "stopColor": "#D770AD"
-          },
-          "selected": false,
-          "dragging": false,
-          "__class__": "Edge"
-        },
-        {
-          "id": "reactflow__edge-b1f8c2da-71e7-4361-af07-6cddf1f89354output-9cc838ca-c9e1-4034-809d-941246a0dc69info",
-          "source": "b1f8c2da-71e7-4361-af07-6cddf1f89354",
-          "sourceHandle": "output",
-          "target": "9cc838ca-c9e1-4034-809d-941246a0dc69",
-          "targetHandle": "info",
-          "data": {
-            "startColor": "#D770AD",
-            "stopColor": "#888"
           },
           "selected": false,
           "dragging": false,
