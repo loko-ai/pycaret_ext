@@ -23,22 +23,22 @@ all_datasets = datasets.get_data('index', verbose=False)
 @app.route("/fit", methods=["POST"])
 @extract_value_args(_request=request)
 def fit(value, args):
-    logger.debug("------------------")
     task = args.get("task")
-
+    logger.debug(f"task: {task}")
     data = datasets.get_data(value, verbose=False)
 
-    logger.debug("ciaooooo")
     if task == "classification":
+        logger.debug("data setup")
         pc.setup(data, target=data.columns[-1], silent=True)
+        logger.debug("comparing models")
         best = pc.compare_models()
         df = pc.pull()
 
         return jsonify([str(best)] + df.to_dict("record"))
     if task == "regression":
-        logger.debug("regressionnnnnn")
-
+        logger.debug("data setup")
         rg.setup(data, target=data.columns[-1], silent=True)
+        logger.debug("comparing models")
         best = rg.compare_models()
         df = rg.pull()
 
